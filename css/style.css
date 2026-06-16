@@ -1,0 +1,299 @@
+/* ================= VARIABLES ================= */
+:root {
+    --color-fondo: #f8f9fa;
+    --color-texto: #333333;
+    --color-primario: #2563eb;
+    --color-primario-hover: #1d4ed8;
+    --color-blanco: #ffffff;
+    --sombra-suave: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --sombra-fuerte: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --radio-bordes: 8px;
+}
+
+/* ================= RESET BÁSICO ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ================= NAVEGACIÓN ================= */
+header {
+    background-color: var(--color-blanco);
+    box-shadow: var(--sombra-suave);
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+/* Añade esto también para separar un poco la sección de recomendados */
+.relacionados-section {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eaeaea;
+}
+
+.relacionados-section h3 {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que el menú baje en móviles */
+}
+
+nav .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-primario);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav ul a:hover {
+    color: var(--color-primario);
+}
+
+/* ================= INICIO (INDEX) ================= */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Grid de Artículos (Diseño Responsivo) */
+.articulos-container {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 columna en móviles */
+    gap: 2rem;
+}
+
+/* Media Query para Tablets y Escritorio */
+@media (min-width: 768px) {
+    .articulos-container {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Múltiples columnas */
+    }
+}
+
+/* Tarjetas (Cards) estilo Material */
+.card {
+    background: var(--color-blanco);
+    border-radius: var(--radio-bordes);
+    overflow: hidden;
+    box-shadow: var(--sombra-suave);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    box-shadow: var(--sombra-fuerte);
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background-color: #ddd; /* Color de fondo por si no hay imagen */
+}
+
+.card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-content .fecha {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.card-content p {
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+}
+
+/* ================= BOTONES ================= */
+.btn-leer {
+    display: inline-block;
+    background-color: var(--color-primario);
+    color: var(--color-blanco) !important;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radio-bordes);
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    align-self: flex-start;
+}
+
+.btn-leer:hover {
+    background-color: var(--color-primario-hover);
+}
+
+/* ================= ARTÍCULO INDIVIDUAL ================= */
+.contenedor-articulo {
+    max-width: 800px; /* Más estrecho para mejor legibilidad */
+    background: var(--color-blanco);
+    padding: 2rem;
+    border-radius: var(--radio-bordes);
+    box-shadow: var(--sombra-suave);
+    margin-top: 2rem;
+}
+
+.post-header h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+.post-header .fecha {
+    color: #666;
+    display: block;
+    margin-bottom: 2rem;
+}
+
+.post-imagen img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: var(--radio-bordes);
+    margin-bottom: 2rem;
+}
+
+.post-cuerpo p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.post-cuerpo h3 {
+    margin: 2rem 0 1rem 0;
+}
+
+.post-cuerpo code {
+    background-color: #e2e8f0;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+/* ================= ADSENSE PLACEHOLDERS ================= */
+/* Esto garantiza que el contenido no salte cuando carguen los anuncios */
+.adsense-placeholder {
+    width: 100%;
+    min-height: 100px;
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f5f9;
+    border: 1px dashed #cbd5e1;
+    color: #94a3b8;
+    border-radius: var(--radio-bordes);
+}
+
+/* ================= FOOTER ================= */
+footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+    background-color: var(--color-blanco);
+    border-top: 1px solid #eaeaea;
+}
+/* ================= AVISO DE COOKIES ================= */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1e293b; /* Color oscuro para contrastar con la web */
+    color: var(--color-blanco);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99999; /* Por encima de todo, incluido el header */
+    box-shadow: 0 -10px 15px -3px rgba(0, 0, 0, 0.1);
+    transform: translateY(100%); /* Lo esconde debajo de la pantalla */
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Animación suave */
+}
+
+/* Esta clase se añadirá con JavaScript para mostrar el banner */
+.cookie-banner.mostrar {
+    transform: translateY(0);
+}
+
+.cookie-banner p {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    text-align: center;
+    max-width: 800px;
+    line-height: 1.5;
+}
+
+.cookie-banner a {
+    color: #60a5fa; /* Un azul claro que resalta en fondo oscuro */
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.cookie-banner .btn-leer {
+    white-space: nowrap;
+    border: none;
+    cursor: pointer;
+}
+
+/* Ajuste para pantallas más grandes (Escritorio/Tablets) */
+@media (min-width: 768px) {
+    .cookie-banner {
+        flex-direction: row;
+        padding: 1rem 3rem;
+    }
+    .cookie-banner p {
+        margin-bottom: 0;
+        text-align: left;
+        margin-right: 2rem;
+    }
+}
