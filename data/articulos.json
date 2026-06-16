@@ -12,7 +12,7 @@
     "titulo": "Diseño de interfaces móviles para control de hardware con Kotlin y Jetpack Compose",
     "fecha": "2026-06-01",
     "resumen": "Cómo estructurar aplicaciones Android modernas y fluidas para interactuar con sistemas de control industrial y dispensadores inteligentes.",
-    "imagen": "https://blog.desdelinux.net/wp-content/uploads/2021/08/Jetpack-Compose.png.webp",
+    "imagen": "assets/Jetpack-Compose.png",
     "contenido": "<p>La forma en que construimos aplicaciones nativas para Android ha cambiado radicalmente. <strong>Jetpack Compose</strong> y Kotlin han reemplazado a los antiguos y pesados layouts en XML, permitiendo crear interfaces de usuario declarativas que reaccionan instantáneamente a los cambios de estado del hardware conectado.</p><h3>Comunicación en tiempo real</h3><p>Cuando desarrollamos interfaces de monitoreo (por ejemplo, para seguir la secuencia de motores o temporizadores en un proyecto físico), la latencia es nuestro peor enemigo. Utilizando <em>StateFlow</em> de Kotlin, podemos crear una arquitectura reactiva donde la pantalla del móvil se actualice en el milisegundo exacto en que un sensor cambia su valor.</p><p>Asegurar que los iconos de estado (como la conexión Bluetooth o indicadores de error) utilicen la librería correcta de Material Icons evitará problemas de resolución y referencias no resueltas al compilar la aplicación...</p>"
   },
   {
