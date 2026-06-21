@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    
+    <url>
+        <loc>https://sintaxisysilicio.site/</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://sintaxisysilicio.site/sobre-mi.html</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://sintaxisysilicio.site/contacto.html</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://sintaxisysilicio.site/politica-privacidad.html</loc>
+        <lastmod>2026-06-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+    <url>
+        <loc>https://sintaxisysilicio.site/articulo.html?id=esp32-s3-firebase-micropython</loc>
+        <lastmod>2026-06-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://sintaxisysilicio.site/redes-ftth-fibra-optica</loc>
+        <lastmod>2026-06-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://sintaxisysilicio.site/logica-plc-allen-bradley</loc>
+        <lastmod>2026-06-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+</urlset>

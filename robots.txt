@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Permitir rastreo específico para Google AdSense
+User-agent: Mediapartners-Google
+Allow: /
+
+# Ubicación del índice del sitio
+Sitemap: https://sintaxisysilicio.site/sitemap.xml
