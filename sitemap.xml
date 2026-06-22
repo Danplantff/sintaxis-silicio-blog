@@ -3,29 +3,41 @@
     
     <url>
         <loc>https://sintaxisysilicio.site/</loc>
-        <lastmod>2026-06-20</lastmod>
+        <lastmod>2026-06-21</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://sintaxisysilicio.site/sobre-mi.html</loc>
-        <lastmod>2026-06-20</lastmod>
+        <lastmod>2026-06-21</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://sintaxisysilicio.site/contacto.html</loc>
-        <lastmod>2026-06-20</lastmod>
+        <lastmod>2026-06-21</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://sintaxisysilicio.site/politica-privacidad.html</loc>
-        <lastmod>2026-06-20</lastmod>
+        <lastmod>2026-06-21</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.3</priority>
     </url>
 
+    <url>
+        <loc>https://sintaxisysilicio.site/articulo.html?id=comercio-impresion-3d-tiktok-live</loc>
+        <lastmod>2026-06-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://sintaxisysilicio.site/articulo.html?id=integracion-firebase-jetpack-compose-realtime</loc>
+        <lastmod>2026-06-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
     <url>
         <loc>https://sintaxisysilicio.site/articulo.html?id=esp32-s3-firebase-micropython</loc>
         <lastmod>2026-06-15</lastmod>
@@ -33,13 +45,13 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://sintaxisysilicio.site/redes-ftth-fibra-optica</loc>
+        <loc>https://sintaxisysilicio.site/articulo.html?id=redes-ftth-fibra-optica</loc>
         <lastmod>2026-06-12</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://sintaxisysilicio.site/logica-plc-allen-bradley</loc>
+        <loc>https://sintaxisysilicio.site/articulo.html?id=logica-plc-allen-bradley</loc>
         <lastmod>2026-06-10</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
