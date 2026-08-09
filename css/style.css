@@ -297,3 +297,19 @@ footer {
         margin-right: 2rem;
     }
 }
+.card {
+    background: var(--color-blanco);
+    border-radius: var(--radio-bordes);
+    overflow: hidden;
+    box-shadow: var(--sombra-suave);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    min-width: 0; /* ¡Esta es la solución principal! */
+}
+@media (min-width: 768px) {
+    .articulos-container {
+        /* Cambiamos auto-fill por auto-fit */
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    }
+}
