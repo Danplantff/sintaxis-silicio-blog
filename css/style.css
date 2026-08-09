@@ -488,19 +488,3 @@ footer {
 .btn-enviar-form:hover {
     background-color: #244b73; /* Azul más oscuro al pasar el ratón */
 }
-/* Para que el menú se deslice suavemente al hacer clic */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Estilos para los títulos separadores de categorías en el Inicio */
-.titulo-categoria {
-    margin: 4rem 0 2rem 0; /* Da respiro entre categorías */
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--color-primario);
-}
-
-.titulo-categoria h2 {
-    font-size: 1.6rem;
-    color: var(--color-texto);
-}
