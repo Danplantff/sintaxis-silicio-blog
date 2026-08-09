@@ -1,3 +1,71 @@
+/* ================= INTRODUCCIÓN GENERAL (INDEX) ================= */
+.intro-general {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    background-color: var(--color-blanco);
+    padding: 2.5rem;
+    border-radius: var(--radio-bordes);
+    box-shadow: var(--sombra-suave);
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.intro-texto {
+    flex: 1;
+}
+
+.intro-texto h2 {
+    font-size: 1.8rem;
+    color: var(--color-primario);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.intro-sub {
+    font-weight: 600;
+    font-style: italic;
+    color: #64748b;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.intro-texto p {
+    margin-bottom: 1rem;
+    text-align: justify;
+    line-height: 1.7;
+    color: var(--color-texto);
+}
+
+.intro-imagen {
+    flex: 1;
+    width: 100%;
+}
+
+.intro-imagen img {
+    width: 100%;
+    border-radius: var(--radio-bordes);
+    object-fit: cover;
+    max-height: 350px;
+    box-shadow: var(--sombra-suave);
+}
+
+.titulo-seccion {
+    text-align: center;
+    margin: 3rem 0 2rem 0;
+}
+
+.titulo-seccion h2 {
+    font-size: 1.8rem;
+    color: var(--color-texto);
+}
+
+/* Diseño lado a lado para escritorio */
+@media (min-width: 768px) {
+    .intro-general {
+        flex-direction: row; 
+    }
+}
 /* ================= VARIABLES ================= */
 :root {
     --color-fondo: #f8f9fa;
@@ -110,7 +178,7 @@ main {
 }
 
 /* Tarjetas (Cards) estilo Material */
-.card {
+.tarjeta-articulo {
     background: var(--color-blanco);
     border-radius: var(--radio-bordes);
     overflow: hidden;
@@ -118,43 +186,68 @@ main {
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     display: flex;
     flex-direction: column;
+    min-width: 0; /* ¡Mantiene el grid a raya! */
 }
 
-.card:hover {
+.tarjeta-articulo:hover {
     box-shadow: var(--sombra-fuerte);
     transform: translateY(-5px);
 }
 
-.card img {
+.img-tarjeta {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    background-color: #ddd; /* Color de fondo por si no hay imagen */
+    background-color: #ddd; 
 }
 
-.card-content {
+.contenido-tarjeta {
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
 }
 
-.card-content h3 {
+.contenido-tarjeta h3 {
     font-size: 1.25rem;
     margin-bottom: 0.5rem;
 }
 
-.card-content .fecha {
+.contenido-tarjeta .fecha-tarjeta {
     font-size: 0.85rem;
     color: #666;
     margin-bottom: 1rem;
 }
 
-.card-content p {
+.contenido-tarjeta p {
     flex-grow: 1;
     margin-bottom: 1.5rem;
 }
+/* Añade esto a tu style.css para mejorar los placeholders */
+.adsense-placeholder {
+    width: 100%;
+    min-height: 100px;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column; /* Cambiado para apilar texto y caja */
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f5f9;
+    border: 1px dashed #cbd5e1;
+    color: #94a3b8;
+    border-radius: var(--radio-bordes);
+    position: relative;
+    padding-top: 20px;
+}
 
+.adsense-placeholder::before {
+    content: "Espacio para anuncio"; /* Etiqueta de transparencia */
+    position: absolute;
+    top: 5px;
+    font-size: 0.7rem;
+    color: #cbd5e1;
+    text-transform: uppercase;
+}
 /* ================= BOTONES ================= */
 .btn-leer {
     display: inline-block;
@@ -173,51 +266,72 @@ main {
 }
 
 /* ================= ARTÍCULO INDIVIDUAL ================= */
-.contenedor-articulo {
-    max-width: 800px; /* Más estrecho para mejor legibilidad */
+.articulo-contenedor {
+    max-width: 800px; /* Mantiene el texto en un ancho ideal para leer */
     background: var(--color-blanco);
-    padding: 2rem;
+    padding: 2.5rem;
     border-radius: var(--radio-bordes);
     box-shadow: var(--sombra-suave);
-    margin-top: 2rem;
+    margin: 2rem auto; /* Lo centra en la pantalla */
 }
 
-.post-header h1 {
+.articulo-cabecera h1 {
     font-size: 2.5rem;
     line-height: 1.2;
     margin-bottom: 0.5rem;
 }
 
-.post-header .fecha {
+.fecha-publicacion {
     color: #666;
     display: block;
     margin-bottom: 2rem;
+    font-size: 0.95rem;
 }
 
-.post-imagen img {
+.imagen-destacada {
     width: 100%;
-    max-height: 400px;
+    max-height: 450px;
     object-fit: cover;
     border-radius: var(--radio-bordes);
     margin-bottom: 2rem;
+    box-shadow: var(--sombra-suave);
 }
 
-.post-cuerpo p {
+.contenido-texto p {
     margin-bottom: 1.5rem;
     font-size: 1.1rem;
+    line-height: 1.8;
 }
 
-.post-cuerpo h3 {
-    margin: 2rem 0 1rem 0;
+.contenido-texto h2 {
+    margin: 2.5rem 0 1rem 0;
+    font-size: 1.8rem;
+    color: var(--color-texto);
 }
 
-.post-cuerpo code {
-    background-color: #e2e8f0;
-    padding: 0.2rem 0.4rem;
-    border-radius: 4px;
-    font-family: monospace;
+/* ================= FOOTER LEGAL Y ENLACES ================= */
+.footer-legal {
+    font-size: 0.85rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto 1.5rem auto;
+    line-height: 1.6;
+    text-align: justify;
 }
 
+.menu-footer {
+    margin-top: 1rem;
+}
+
+.menu-footer a {
+    margin: 0 0.5rem;
+    color: var(--color-primario);
+    font-weight: 500;
+}
+
+.menu-footer a:hover {
+    text-decoration: underline;
+}
 /* ================= ADSENSE PLACEHOLDERS ================= */
 /* Esto garantiza que el contenido no salte cuando carguen los anuncios */
 .adsense-placeholder {
@@ -312,4 +426,81 @@ footer {
         /* Cambiamos auto-fill por auto-fit */
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     }
+}
+/* ================= FORMULARIO DE CONTACTO ================= */
+.formulario-contacto {
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.form-grupo {
+    margin-bottom: 1.5rem;
+}
+
+.form-grupo label {
+    display: block;
+    margin-bottom: 0.4rem;
+    color: #555555;
+    font-size: 0.95rem;
+}
+
+.form-grupo input,
+.form-grupo textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db; /* Borde gris sutil */
+    border-radius: 2px; /* Esquinas casi rectas como en tu imagen */
+    background-color: #fdfdfd;
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--color-texto);
+    transition: border-color 0.3s ease;
+}
+
+/* Efecto al hacer clic en las cajas de texto */
+.form-grupo input:focus,
+.form-grupo textarea:focus {
+    outline: none;
+    border-color: #7b9ebc; 
+}
+
+.form-grupo textarea {
+    resize: vertical; /* Permite estirar hacia abajo pero no hacia los lados */
+    min-height: 180px;
+}
+
+/* Botón de Enviar idéntico a la imagen */
+.btn-enviar-form {
+    background-color: #336699; /* Tono de azul del ejemplo */
+    color: var(--color-blanco);
+    border: none;
+    padding: 0.75rem 2rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background-color 0.3s;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+.btn-enviar-form:hover {
+    background-color: #244b73; /* Azul más oscuro al pasar el ratón */
+}
+/* Para que el menú se deslice suavemente al hacer clic */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilos para los títulos separadores de categorías en el Inicio */
+.titulo-categoria {
+    margin: 4rem 0 2rem 0; /* Da respiro entre categorías */
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--color-primario);
+}
+
+.titulo-categoria h2 {
+    font-size: 1.6rem;
+    color: var(--color-texto);
 }

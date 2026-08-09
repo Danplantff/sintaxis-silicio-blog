@@ -9,13 +9,20 @@
 </head>
 <body>
 
-    <header>
+<header>
         <nav>
-            <a href="index.html">Inicio</a>
-            <a href="sobre-mi.html">Sobre mí</a>
-            <a href="contacto.html">Contacto</a>
+            <div class="logo"><a href="index.html">Sintaxis & Silicio</a></div>
+            <ul>
+                <!-- Enlaces actualizados para saltar a las categorías -->
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="jetpack-compose.html">Hardware e IoT</a></li>
+                <li><a href="impresion-3d.html">Impresión 3D</a></li>
+                <li><a href="logica-plc.html">Redes y PLC</a></li>
+                <li><a href="sobre-mi.html">Sobre mí</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
         </nav>
-    </header>
+</header>
 
     <main class="articulo-contenedor">
         <article>
@@ -52,12 +59,43 @@
                 <p>Documentar y sortear estas peculiaridades de interoperabilidad es fundamental. Una vez que la capa física y lógica operan en armonía, el sistema puede enviar variables de consumo de corriente, frecuencia y torque hacia los sistemas SCADA, allanando el camino para implementar mantenimientos predictivos basados en datos reales de operación.</p>
             </div>
         </article>
+        <section class="relacionados-section">
+            <h3>También podría interesarte</h3>
+            <div class="articulos-container">
+                <!-- Tarjeta Relacionada 1 -->
+                <article class="tarjeta-articulo">
+                    <img src="assets/Jetpack-Compose.png" alt="Jetpack Compose" class="img-tarjeta">
+                    <div class="contenido-tarjeta">
+                        <h4>Interfaces móviles para control de hardware</h4>
+                        <a href="jetpack-compose.html" class="btn-leer">Leer artículo</a>
+                    </div>
+                </article>
+                <!-- Tarjeta Relacionada 2 -->
+                <article class="tarjeta-articulo">
+                    <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80" alt="Fibra Óptica FTTH" class="img-tarjeta">
+                    <div class="contenido-tarjeta">
+                        <h4>Arquitectura de redes FTTH</h4>
+                        <a href="redes-ftth.html" class="btn-leer">Leer artículo</a>
+                    </div>
+                </article>
+            </div>
+        </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Sintaxis & Silicio. Todos los derechos reservados.</p>
-        <a href="politica-privacidad.html">Política de Privacidad</a>
-    </footer>
+<footer>
+        <div class="footer-legal">
+            <p>Descargo de Responsabilidad: Los tutoriales y análisis presentados en Sintaxis & Silicio son de carácter estrictamente educativo. La manipulación de hardware, componentes electrónicos o el despliegue de infraestructura de telecomunicaciones debe realizarse bajo las normativas de seguridad correspondientes. No nos hacemos responsables por daños derivados de la mala aplicación de la información.</p>
+        </div>
+        <div class="footer-enlaces">
+            <p>&copy; 2026 Sintaxis & Silicio. Todos los derechos reservados.</p>
+            <nav class="menu-footer">
+                <a href="sobre-mi.html">Quiénes Somos</a> |
+                <a href="contacto.html">Contacto</a> |
+                <a href="politica-privacidad.html">Política de Privacidad y Cookies</a> |
+                <a href="aviso-legal.html">Aviso Legal</a>
+            </nav>
+        </div>
+</footer>
 
 </body>
 </html>

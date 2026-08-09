@@ -4,61 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto | Sintaxis & Silicio</title>
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-        .contact-content {
-            max-width: 600px;
-            margin: 3rem auto;
-            background: var(--color-blanco);
-            padding: 3rem;
-            border-radius: var(--radio-bordes);
-            box-shadow: var(--sombra-suave);
-            text-align: center;
-        }
-        .btn-contacto {
-            display: inline-block;
-            margin-top: 1.5rem;
-            padding: 1rem 2rem;
-            background-color: var(--color-primario);
-            color: white;
-            font-weight: bold;
-            border-radius: var(--radio-bordes);
-        }
-    </style>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4132174119961625"
-     crossorigin="anonymous"></script>
+    <meta name="description" content="Ponte en contacto para consultas sobre automatización, IoT e impresión 3D.">
+    <link rel="stylesheet" href="css/style.css"> 
 </head>
 <body>
-    <header>
+
+<header>
         <nav>
             <div class="logo"><a href="index.html">Sintaxis & Silicio</a></div>
             <ul>
+                <!-- Enlaces actualizados para saltar a las categorías -->
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="sobre-mi.html">Sobre Mí</a></li>
+                <li><a href="jetpack-compose.html">Hardware e IoT</a></li>
+                <li><a href="impresion-3d.html">Impresión 3D</a></li>
+                <li><a href="logica-plc.html">Redes y PLC</a></li>
+                <li><a href="sobre-mi.html">Sobre mí</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
-    </header>
+</header>
 
-    <main class="contact-content">
-        <h1>Ponte en contacto</h1>
-        <p>¿Tienes alguna duda sobre un artículo técnico, propuestas de colaboración o consultas sobre automatización y desarrollo web? Estaré encantado de leerte.</p>
-        <!-- Reemplaza "tu-correo@email.com" con un correo real -->
-        <a href="mailto:tu-correo@email.com" class="btn-contacto">Enviar un correo electrónico</a>
+    <main class="articulo-contenedor">
+        <article>
+            <header class="articulo-cabecera">
+                <h1>Contacto</h1>
+                <p class="fecha-publicacion">Envíame un mensaje y te responderé lo antes posible.</p>
+            </header>
+
+            <div class="contenido-texto">
+                <!-- Formulario procesado automáticamente por Netlify -->
+                <form name="contacto" method="POST" data-netlify="true" class="formulario-contacto">
+                    
+                    <div class="form-grupo">
+                        <label for="nombre">Tu nombre</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="email">Tu correo electrónico</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="asunto">Asunto</label>
+                        <input type="text" id="asunto" name="asunto" required>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="mensaje">Tu mensaje (opcional)</label>
+                        <textarea id="mensaje" name="mensaje" rows="8"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-enviar-form">ENVIAR</button>
+                    
+                </form>
+            </div>
+        </article>
     </main>
 
     <footer>
-        <p>&copy; 2026 Sintaxis & Silicio. Todos los derechos reservados.</p>
-        <a href="politica-privacidad.html">Política de Privacidad</a>
+        <div class="footer-legal">
+            <p>Descargo de Responsabilidad: Los tutoriales y análisis presentados en Sintaxis & Silicio son de carácter estrictamente educativo. La manipulación de hardware, componentes electrónicos o el despliegue de infraestructura de telecomunicaciones debe realizarse bajo las normativas de seguridad correspondientes. No nos hacemos responsables por daños derivados de la mala aplicación de la información.</p>
+        </div>
+        <div class="footer-enlaces">
+            <p>&copy; 2026 Sintaxis & Silicio. Todos los derechos reservados.</p>
+            <nav class="menu-footer">
+                <a href="sobre-mi.html">Quiénes Somos</a> |
+                <a href="contacto.html">Contacto</a> |
+                <a href="politica-privacidad.html">Política de Privacidad y Cookies</a> |
+                <a href="aviso-legal.html">Aviso Legal</a>
+            </nav>
+        </div>
     </footer>
-<!-- Inicio del Aviso de Cookies -->
-    <div id="cookie-banner" class="cookie-banner">
-        <p>Utilizamos cookies propias y de terceros (Google AdSense) para personalizar el contenido y analizar nuestro tráfico. Al continuar navegando, aceptas nuestra <a href="politica-privacidad.html">Política de Privacidad y Cookies</a>.</p>
-        <button id="btn-aceptar-cookies" class="btn-leer">Aceptar y cerrar</button>
-    </div>
-    <!-- Fin del Aviso de Cookies -->
 
-    <!-- Tus otros scripts aquí -->
-    <script src="js/cookies.js"></script>
 </body>
 </html>
