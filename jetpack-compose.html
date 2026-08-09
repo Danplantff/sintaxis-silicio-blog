@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño de interfaces móviles para control de hardware con Kotlin y Jetpack Compose | Sintaxis & Silicio</title>
+    <meta name="description" content="Cómo estructurar aplicaciones Android modernas y fluidas para interactuar con sistemas de control industrial y dispensadores inteligentes.">
+    <link rel="stylesheet" href="css/style.css"> 
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html">Sintaxis & Silicio</a></div>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="sobre-mi.html">Sobre mí</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="articulo-contenedor">
+        <article>
+            <header class="articulo-cabecera">
+                <h1>Diseño de interfaces móviles para control de hardware con Kotlin y Jetpack Compose</h1>
+                <p class="fecha-publicacion">Publicado el: 1 de Junio, 2026</p>
+            </header>
+
+            <img src="assets/Jetpack-Compose.png" alt="Desarrollo de interfaces con Jetpack Compose en Android" class="imagen-destacada">
+
+            <div class="contenido-texto">
+                <p>La forma en que construimos aplicaciones nativas para el ecosistema Android ha cambiado radicalmente en los últimos años. El paradigma imperativo de definir vistas en archivos XML largos y pesados ha quedado obsoleto. <strong>Jetpack Compose</strong> y Kotlin han estandarizado un enfoque declarativo, permitiendo a los desarrolladores crear interfaces de usuario que no solo son más rápidas de codificar, sino que reaccionan instantáneamente a los cambios de estado.</p>
+                <p>Esta reactividad es especialmente crítica cuando la aplicación no solo muestra datos estáticos de una API web, sino que interactúa bidireccionalmente con sistemas de hardware físico, como microcontroladores ESP32 o automatismos industriales.</p>
+
+                <!-- ESPACIO PARA ANUNCIO ADSENSE 1 -->
+                <div class="adsense-placeholder"></div>
+
+                <h2>La latencia y la arquitectura reactiva</h2>
+                <p>Cuando desarrollamos interfaces de monitoreo orientadas al hardware —por ejemplo, para seguir la secuencia de activación de motores de un dispensador inteligente o el estado de sensores remotos IoT— la latencia visual es nuestro peor enemigo. El usuario espera que al presionar un botón en la pantalla, la máquina física responda sin demora, y que la interfaz refleje el éxito de esa acción.</p>
+                <p>Aquí es donde el manejo del estado en Kotlin brilla. Utilizando herramientas como <em>StateFlow</em> o <em>LiveData</em> en combinación con la arquitectura MVVM (Model-View-ViewModel), podemos crear un flujo de datos unidireccional. La pantalla de la aplicación simplemente 'observa' el estado de la variable de hardware en la nube y se recompone (se redibuja) en el milisegundo exacto en que ese valor cambia.</p>
+
+                <!-- ESPACIO PARA ANUNCIO ADSENSE 2 -->
+                <div class="adsense-placeholder"></div>
+
+                <h2>Diseño de componentes con Compose</h2>
+                <p>La filosofía de Jetpack Compose se basa en pequeñas funciones independientes anotadas con <code>@Composable</code>. En lugar de tener una pantalla gigante difícil de mantener, construimos bloques reutilizables.</p>
+                <p>Imagina diseñar un panel de control. Puedes crear un componente <code>BotónActuador(estadoMotor: Boolean)</code>. Si el <code>estadoMotor</code> es verdadero, el botón se renderiza de color verde con el texto 'En Marcha'; si es falso, cambia a rojo con el texto 'Detenido'. La magia radica en que el framework es lo suficientemente inteligente como para redibujar únicamente ese botón, optimizando drásticamente el consumo de batería y la fluidez a 60 fps.</p>
+
+                <!-- ESPACIO PARA ANUNCIO ADSENSE 3 -->
+                <div class="adsense-placeholder"></div>
+
+                <h2>Integración de Material Design 3 e Iconografía</h2>
+                <p>Una interfaz de control de hardware debe ser clara e intuitiva. Las normas de diseño industrial dictan que los colores y los iconos deben comunicar el estado de forma inequívoca (verde para operación normal, amarillo para advertencia, rojo para fallos críticos).</p>
+                <p>Jetpack Compose integra nativamente los principios de Material Design 3. Asegurar que los iconos de estado (como los indicadores de conexión Bluetooth, WiFi o alertas de nivel bajo) utilicen la librería correcta de Material Icons es fundamental para evitar imágenes pixeladas en pantallas de alta densidad.</p>
+                
+                <h2>Conclusión del Desarrollo Móvil</h2>
+                <p>Combinar la potencia del desarrollo de firmware embebido con interfaces móviles modernas creadas en Kotlin abre un abanico infinito de posibilidades para crear productos comerciales viables. Una interfaz de usuario pulida y reactiva es, a menudo, la diferencia entre un prototipo de laboratorio y un producto tecnológico listo para el consumidor final.</p>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sintaxis & Silicio. Todos los derechos reservados.</p>
+        <a href="politica-privacidad.html">Política de Privacidad</a>
+    </footer>
+
+    <!-- Scripts -->
+    <div id="cookie-banner" class="cookie-banner">
+        <p>Utilizamos cookies propias y de terceros (Google AdSense) para personalizar el contenido y analizar nuestro tráfico. Al continuar navegando, aceptas nuestra <a href="politica-privacidad.html">Política de Privacidad y Cookies</a>.</p>
+        <button id="btn-aceptar-cookies" class="btn-leer">Aceptar y cerrar</button>
+    </div>
+    <script src="js/cookies.js"></script>
+
+</body>
+</html>

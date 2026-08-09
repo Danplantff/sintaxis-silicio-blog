@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telemetría segura IoT: Conectando el ESP32-S3 a Firebase con MicroPython | Sintaxis & Silicio</title>
+    <meta name="description" content="Guía técnica para establecer conexiones seguras utilizando el módulo SSL nativo y gestionar bases de datos en tiempo real.">
+    <link rel="stylesheet" href="css/style.css"> 
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="sobre-mi.html">Sobre mí</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main class="articulo-contenedor">
+        <article>
+            <header class="articulo-cabecera">
+                <h1>Telemetría segura IoT: Conectando el ESP32-S3 a Firebase con MicroPython</h1>
+                <p class="fecha-publicacion">Publicado el: 15 de Junio, 2026</p>
+            </header>
+
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Microcontrolador y circuitos IoT" class="imagen-destacada">
+
+            <div class="contenido-texto">
+                <p>El desarrollo de sistemas embebidos modernos exige no solo conectividad, sino seguridad robusta en la transmisión de datos. El <strong>ESP32-S3</strong> se ha consolidado como el microcontrolador predilecto para aplicaciones IoT complejas, superando a sus predecesores gracias a su mayor capacidad de procesamiento y soporte nativo para operaciones vectoriales.</p>
+                <p>Cuando diseñamos soluciones de automatización, ya sea para monitorear sensores industriales o para gestionar la lógica de control en dispositivos a medida, la sincronización de datos en la nube se vuelve el núcleo del proyecto. Firebase ofrece una base de datos en tiempo real (Realtime Database) que encaja perfectamente con este ecosistema.</p>
+
+                <!-- ESPACIO PARA ANUNCIO ADSENSE 1 -->
+                <div class="adsense-placeholder"></div>
+
+                <h2>La importancia de la capa de seguridad (SSL/TLS)</h2>
+                <p>Un error crítico en la implementación de MicroPython para proyectos IoT es la mala configuración de los sockets seguros. Si vas a enviar telemetría a los servidores de Google (Firebase), es imperativo que la comunicación esté encriptada.</p>
+                <p>Históricamente, muchos desarrolladores recurrían a librerías de terceros o módulos desactualizados. En las versiones modernas de firmware para el ESP32-S3, debes importar el módulo estándar <code>ssl</code> directamente en tu script, dejando atrás el antiguo <code>ussl</code>. Utilizar el módulo correcto garantiza la compatibilidad con los certificados raíz modernos y evita vulnerabilidades de interceptación de datos (Man-in-the-Middle).</p>
+
+                <!-- ESPACIO PARA ANUNCIO ADSENSE 2 -->
+                <div class="adsense-placeholder"></div>
+
+                <h2>Autenticación y Peticiones REST</h2>
+                <p>Firebase no permite conexiones anónimas por defecto si sus reglas de seguridad están bien configuradas. Para autenticar nuestro ESP32-S3, necesitamos generar un 'Secret de la Base de Datos' o utilizar un token de autenticación mediante la API REST.</p>
+                <p>El proceso comienza conectando el microcontrolador a la red WiFi. Una vez obtenida la dirección IP, utilizamos la librería <code>urequests</code> y construimos una petición HTTP PATCH o PUT. Usar PATCH es altamente recomendado cuando solo queremos actualizar un valor específico (por ejemplo, el estado de un actuador) sin sobrescribir todo el nodo JSON de la base de datos.</p>
+
+                <!-- ESPACIO PARA ANUNCIO ADSENSE 3 -->
+                <div class="adsense-placeholder"></div>
+
+                <h2>Manejo de Latencia y Desconexiones</h2>
+                <p>En el mundo real, las conexiones WiFi fluctúan. Un buen firmware debe ser resiliente. Si tu dispositivo pierde conexión, una llamada a Firebase bloqueará el código de tu microcontrolador indefinidamente si no configuras un timeout adecuado.</p>
+                <p>Implementar un temporizador por hardware o usar <code>uasyncio</code> para programación asíncrona te permite mantener interfaces físicas activas mientras el ESP32 intenta reconectarse en segundo plano. Guardar los datos en la memoria flash local de forma temporal y enviarlos en bloque cuando la conexión regrese es el estándar en arquitecturas de grado industrial.</p>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sintaxis & Silicio. Todos los derechos reservados.</p>
+        <a href="politica-privacidad.html">Política de Privacidad</a>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimización de temporizadores y variadores en automatización industrial | Sintaxis & Silicio</title>
+    <meta name="description" content="Buenas prácticas en la programación de PLCs CompactLogix y desbloqueo de configuraciones en variadores industriales.">
+    <link rel="stylesheet" href="css/style.css"> 
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="sobre-mi.html">Sobre mí</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main class="articulo-contenedor">
+        <article>
+            <header class="articulo-cabecera">
+                <h1>Optimización de temporizadores y variadores en automatización industrial</h1>
+                <p class="fecha-publicacion">Publicado el: 10 de Junio, 2026</p>
+            </header>
+
+            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" alt="Panel de control PLC industrial" class="imagen-destacada">
+
+            <div class="contenido-texto">
+                <p>En el corazón de toda planta automatizada moderna se encuentra un PLC operando en un entorno riguroso. La eficiencia del código ladder o de bloques funcionales se traduce directamente en seguridad operativa, reducción de tiempos de inactividad y ahorro energético en motores industriales de alto tonelaje.</p>
+                <p>Cuando se trabaja con la arquitectura de controladores CompactLogix de Allen-Bradley, estructurando la lógica de control desde entornos como Studio 5000 y diseñando las interfaces HMI asociadas en plataformas como FactoryTalk Optix, se exige un nivel de precisión absoluto. Esta exigencia aumenta significativamente cuando el PLC debe gobernar hardware de red heterogéneo en la planta de manufactura.</p>
+
+                <!-- ESPACIO PARA ANUNCIO ADSENSE 1 -->
+                <div class="adsense-placeholder"></div>
+
+                <h2>Uso Avanzado de Instrucciones TON</h2>
+                <p>El control preciso del tiempo es fundamental. En Studio 5000, los temporizadores TON (Timer On Delay) y TONR (Timer On Delay Retentive) son las herramientas principales. Un TON no solo sirve para retrasar el encendido de un motor; anidado correctamente en arreglos lógicos, permite secuenciar arranques escalonados.</p>
+                <p>Esta técnica protege la infraestructura eléctrica. Si en una planta de procesamiento se encienden todas las bombas simultáneamente, el pico de corriente de arranque (Inrush Current) hará colapsar la red y disparará las protecciones térmicas. Una lógica de temporizadores en cascada asegura una rampa de carga suave.</p>
+
+                <!-- ESPACIO PARA ANUNCIO ADSENSE 2 -->
+                <div class="adsense-placeholder"></div>
+
+                <h2>Integración transversal de Variadores de Frecuencia</h2>
+                <p>El PLC es el cerebro, pero los variadores de frecuencia (VFD) son los músculos. La tendencia actual es el control mediante protocolos de campo como EtherNet/IP o PROFINET (como es habitual cuando se programa con TIA Portal). Sin embargo, comisionar estos equipos presenta retos de configuración a nivel de hardware, especialmente al integrar marcas distintas en un mismo bus.</p>
+                <p>Un caso clásico en el campo es la integración de variadores de la línea SINAMICS G120 de Siemens. Es muy común que el integrador intente modificar la macro de control o el parámetro del modo de control de tensión (como el p1300) y se encuentre con un rechazo de escritura por parte de la unidad, asumiendo erróneamente un fallo de red.</p>
+
+                <!-- ESPACIO PARA ANUNCIO ADSENSE 3 -->
+                <div class="adsense-placeholder"></div>
+
+                <h2>Desbloqueos y Mantenimiento Predictivo</h2>
+                <p>La incapacidad de guardar parámetros clave en los SINAMICS G120 frecuentemente se debe a que existen candados de configuración de seguridad activos de fábrica en el variador. Para liberar el acceso de escritura remota, el técnico debe purgar los bloqueos de seguridad previos; solo así el VFD aceptará la nueva parametrización del motor desde la red industrial.</p>
+                <p>Documentar y sortear estas peculiaridades de interoperabilidad es fundamental. Una vez que la capa física y lógica operan en armonía, el sistema puede enviar variables de consumo de corriente, frecuencia y torque hacia los sistemas SCADA, allanando el camino para implementar mantenimientos predictivos basados en datos reales de operación.</p>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sintaxis & Silicio. Todos los derechos reservados.</p>
+        <a href="politica-privacidad.html">Política de Privacidad</a>
+    </footer>
+
+</body>
+</html>
