@@ -13,18 +13,22 @@
 <body>
 
 <header>
-        <nav>
-            <div class="logo"><a href="index.html">Sintaxis & Silicio</a></div>
-            <ul>
-                <!-- Enlaces actualizados para saltar a las categorías -->
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="jetpack-compose.html">Hardware e IoT</a></li>
-                <li><a href="impresion-3d.html">Impresión 3D</a></li>
-                <li><a href="logica-plc.html">Redes y PLC</a></li>
-                <li><a href="sobre-mi.html">Sobre mí</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
+    <nav>
+        <div class="logo"><a href="index.html">Sintaxis & Silicio</a></div>
+        
+        <!-- Botón que solo se verá en móviles -->
+        <button id="btn-menu" class="btn-menu">☰ MENÚ</button>
+        
+        <!-- Agregamos el id="menu-principal" a la lista -->
+        <ul id="menu-principal">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#cat-iot">Hardware e IoT</a></li>
+            <li><a href="index.html#cat-3d">Impresión 3D</a></li>
+            <li><a href="index.html#cat-redes">Redes y PLC</a></li>
+            <li><a href="sobre-mi.html">Sobre mí</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
 </header>
 
     <main>

@@ -108,18 +108,6 @@ header {
     z-index: 9999;
 }
 
-/* Añade esto también para separar un poco la sección de recomendados */
-.relacionados-section {
-    margin-top: 4rem;
-    padding-top: 2rem;
-    border-top: 1px solid #eaeaea;
-}
-
-.relacionados-section h3 {
-    margin-bottom: 2rem;
-    font-size: 1.5rem;
-    text-align: center;
-}
 nav {
     max-width: 1200px;
     margin: 0 auto;
@@ -127,7 +115,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Permite que el menú baje en móviles */
+    flex-wrap: wrap; /* Crucial para que el menú baje al expandirse */
 }
 
 nav .logo a {
@@ -136,16 +124,55 @@ nav .logo a {
     color: var(--color-primario);
 }
 
+/* Diseño del botón hamburguesa - Oculto por defecto en PC */
+.btn-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    color: var(--color-primario);
+    cursor: pointer;
+    font-weight: bold;
+    padding: 0.5rem;
+}
+
 nav ul {
     list-style: none;
     display: flex;
     gap: 1.5rem;
+    transition: max-height 0.3s ease-out; /* Animación suave al abrir */
 }
 
 nav ul a:hover {
     color: var(--color-primario);
 }
 
+/* ================= DISEÑO MÓVIL (Menú Retráctil) ================= */
+@media (max-width: 768px) {
+    .btn-menu {
+        display: block; /* Mostramos el botón solo en móviles */
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        gap: 0;
+        /* Ocultamos los enlaces por defecto colapsando su altura */
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    nav ul li {
+        padding: 1rem 0;
+        border-bottom: 1px solid #f1f5f9;
+    }
+
+    /* Esta clase la añadiremos con JavaScript al tocar el botón */
+    nav ul.mostrar {
+        max-height: 400px; 
+    }
+}
 /* ================= INICIO (INDEX) ================= */
 main {
     max-width: 1200px;
